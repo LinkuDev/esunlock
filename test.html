@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url("./img/images/bg-esunlock.png"); /* Đường dẫn tới hình ảnh nền */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      .content-container {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+      }
+
+      .image-overlay {
+        margin-right: 20px;
+      }
+
+      .image-overlay img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+
+      .text {
+        flex: 1;
+      }
+    </style>
+    <title>Background Image Example</title>
+  </head>
+  <body>
+    <div class="content-container">
+      <div class="image-overlay">
+        <img src="./img/images/esun-bg-2.png" alt="Overlay Image" />
+        <!-- Đường dẫn tới hình ảnh chồng lên -->
+      </div>
+      <div class="text">
+        <p>This is some text content beside the image.</p>
+        <!-- Đoạn văn bản bên cạnh hình ảnh -->
+      </div>
+    </div>
+  </body>
+</html>
