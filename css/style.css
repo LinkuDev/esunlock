@@ -1,12 +1,7 @@
 .banner {
-  max-width: 100%;
   width: 100%;
 }
-.banner img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-}
+
 /*end header dưới*/
 
 /* product */
@@ -14,6 +9,9 @@
 .product {
   margin-top: 50px;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
 }
 .product-tittle {
   margin-bottom: 32px;
@@ -28,7 +26,11 @@
 /* end product */
 
 /* brand */
-
+.product-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .brand-logo {
   display: flex;
   gap: 20px;
@@ -76,74 +78,15 @@
   border: 1px solid #f47f20;
   background-color: white;
 }
+
+.btn-more-product:hover {
+  color: white;
+  background-color: #f47f20;
+}
 /* end brand */
 
 /* esunlock detail */
 
-.esunlock {
-  background-image: url("../img/images/bg-esunlock.png");
-  background-size: cover;
-  object-fit: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  max-width: 1440px;
-  height: auto;
-  margin-top: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.esun-detail {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 80px 0;
-  gap: 30px;
-  width: 100%;
-  height: 100%;
-}
-.img-layer {
-  display: flex;
-  justify-content: flex-end;
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: contain;
-  border: 1px red solid;
-}
-.esun-text {
-  border: solid green 1px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  max-height: 100%;
-  width: 100%;
-}
-.detail-title {
-  font-size: 28px;
-  font-weight: 600;
-}
-.detail-text {
-  font-size: 16px;
-  line-height: 150%;
-}
-.detail-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.detail-list-item {
-  display: flex;
-  gap: 8px;
-}
-.btn-detail {
-  margin-top: 16px;
-  height: 48px;
-  padding: 12px 24px;
-  background: #f47f20;
-  color: white;
-  border: none;
-}
 /* end esunlock detail */
 
 /* news */
@@ -154,7 +97,15 @@
   font-weight: 600;
   text-transform: uppercase;
 }
+
+.news {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .news-content {
+  max-width: 1440px;
   margin-top: 32px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -170,9 +121,13 @@
 /* contact */
 .contact {
   margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact-layout {
+  max-width: 1440px;
   display: flex;
   justify-content: space-between;
   gap: 32px;
@@ -221,11 +176,148 @@ input.form-text {
 .gg-map {
   width: 50%;
 }
+.gg-map img {
+  width: 100%;
+  height: 100%;
+}
 /* end contact */
 
 /* tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
-  body {
-    font-size: 8px;
+}
+
+/* slideshow */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+
+.slides {
+  display: flex;
+  overflow: hidden;
+}
+
+.slide {
+  flex: 0 0 calc(100% / 5);
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+  opacity: 1;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  padding: 10px;
+  transition: background-color 0.5s ease-in-out;
+  background-color: #f47f20;
+}
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: #ccc;
+}
+
+/* slide 2 */
+.mySlides {
+  display: none;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.slider-contanier {
+  display: flex;
+  align-items: center;
+}
+
+.btn-next {
+  padding: 3px 10px;
+  background-color: #f47f20;
+  border: none;
+}
+
+.float {
+  user-select: none; /* Ngăn chọn văn bản bên trong */
+  pointer-events: none;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  bottom: 55%;
+  right: 40px;
+
+  text-align: center;
+
+  z-index: 666;
+}
+
+.my-float {
+  margin-top: 22px;
+}
+
+.float img {
+  animation: moveIcon 3s infinite linear;
+}
+@keyframes moveIcon {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.float-movetop {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #f47f20;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 666;
+}
+.float-movetop:hover {
+  background-color: #bdbdbd;
+}
+.my-float {
+  margin-top: 22px;
+}
+
+.float img {
+  animation: moveIcon 3s infinite linear;
+}
+@keyframes moveIcon {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

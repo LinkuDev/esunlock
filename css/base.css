@@ -1,14 +1,17 @@
+* {
+  box-sizing: border-box;
+}
 html,
 body {
-  font-family: "Be Vietnam Pro", sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif !important;
   font-size: 14px;
-  max-width: 1440px;
+  max-width: 100%;
   width: 100%;
   margin: 0 auto;
 }
 
 .wrapper {
-  padding: 0 100px;
+  padding: 0 15vh;
 }
 
 .font-20 {
@@ -17,6 +20,12 @@ body {
 }
 
 /*header trên*/
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
 .header-information {
   padding: 12px 100px;
   height: 44;
@@ -46,14 +55,46 @@ body {
 
 /*end header trên*/
 /*header dưới*/
+/* res nav */
+.toggle-btn {
+  display: none;
+  float: right;
+}
+.header-nav-list a:hover {
+  color: #f47f20;
+}
+.drop-menu {
+  transition: opacity 1s ease-in-out;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 16px 16px 16px;
+  display: none;
+  z-index: 1;
+  top: 50px;
+  background-color: white;
+}
+.drop-menu a {
+  font-size: 12px;
+}
+/* end res nav */
+.header-nav-list a:first-child {
+  display: none;
+}
 .header-nav {
+  background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 0;
+  padding: 8px 5vw;
+  width: 100%;
 }
 
 .header-nav-list {
+  font-weight: 600;
   width: 60%;
   display: flex;
   align-items: center;
@@ -106,6 +147,7 @@ body {
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
+  transition: transform 0.3s;
 }
 
 .product-information {
@@ -155,6 +197,9 @@ body {
   left: 0px;
 }
 
+.product-item:hover .product-image {
+  transform: scale(1.2);
+}
 /*end product */
 
 /* pagination */
@@ -188,7 +233,70 @@ body {
   border: none;
 }
 /* end pagination */
+/* esunlock  */
+.esunlock {
+  background-image: url("../img/images/bg-esunlock.png");
+  background-size: cover;
+  object-fit: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.esun-detail {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 80px 0;
+  gap: 30px;
+  width: 100%;
+  height: 100%;
+}
+.img-layer {
+  display: flex;
+  justify-content: flex-end;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+.esun-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 100%;
+  max-width: 500px;
+  width: 100%;
+}
+.detail-title {
+  font-size: 28px;
+  font-weight: 600;
+}
+.detail-text {
+  font-size: 16px;
+  line-height: 150%;
+}
+.detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.detail-list-item {
+  display: flex;
+  gap: 8px;
+}
+.btn-detail {
+  margin-top: 16px;
+
+  padding: 12px 24px;
+  background: #f47f20;
+  color: white;
+  border: none;
+}
+/* esunlock */
 /* dùng chung */
 .title-border {
   padding: 8px;
@@ -221,6 +329,7 @@ body {
 .news-item {
   display: flex;
 }
+
 .news-item-right {
   margin-left: 20px;
 }
@@ -230,17 +339,19 @@ body {
   font-weight: 600;
 }
 .news-item-text {
-  font-size: 14px;
   font-weight: 400;
   color: #616161;
 }
 .news-info {
   display: flex;
-  font-size: 12px;
+
   font-weight: 400;
   color: Gray/600;
   gap: 16px;
   margin-top: 12px;
+}
+.news-info img {
+  height: 1em;
 }
 .news-info-item {
   display: flex;
@@ -252,7 +363,6 @@ body {
 }
 .news-text {
   margin-top: 8px;
-  font-size: 14px;
   font-weight: 400;
   color: #616161;
 }
@@ -314,10 +424,12 @@ footer {
   font-family: inherit;
   margin-top: 80px;
 }
-.vector-layer {
+.vector-layer img {
   padding: 0 !important;
   position: absolute;
   object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
 
 .information {
@@ -344,3 +456,292 @@ footer span {
 }
 
 /* tablet */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .logo img {
+    width: 45px;
+    height: 45px;
+    margin-left: 10px;
+  }
+  .content-right {
+    gap: 10px;
+  }
+  /* header */
+  .wrapper {
+    padding: 0 50px;
+  }
+  body {
+    font-size: 8px;
+  }
+  .header-information-item {
+    font-size: 8px;
+  }
+
+  .header-nav {
+    height: 60px;
+    font-size: 12px;
+  }
+  .title-category {
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+
+  .nav-search input {
+    padding: 4px 8px;
+  }
+  .drop-menu {
+    display: none !important;
+  }
+  /* end header */
+
+  /* middle */
+  /* left-tag */
+  .search-form {
+    padding: 4px;
+  }
+  .search-form input {
+    height: 30px;
+  }
+
+  .search-form button {
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+  }
+
+  .search-filter {
+    margin-top: 15px;
+  }
+  .filter-brand {
+    font-size: 10px;
+  }
+  /* end left-tag */
+  /* end middle */
+  /* footer */
+  footer {
+    margin-top: 30px;
+  }
+  .information {
+    padding: 20px 0 0 0;
+  }
+
+  .bot-footer {
+    margin-bottom: 10px;
+  }
+
+  .information img {
+    width: 40px;
+    height: 40px;
+  }
+  .information p {
+    margin: 10px;
+  }
+
+  .footer-social img {
+    width: 20px;
+    height: 20px;
+  }
+  .logo-bottom img {
+    width: 60px;
+  }
+  /* end footer */
+
+  /* dropdown  */
+  .dropdown-content {
+    top: 60px !important;
+  }
+}
+
+/* moblile */
+
+@media (max-width: 768px) {
+  .dropdown {
+    display: none !important;
+  }
+  .wrapper {
+    padding: 0px !important;
+  }
+  /* sticky header */
+  .header-nav {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    border-bottom: #9e9e9e solid 0.5px;
+  }
+  /* end sticky */
+  /* header ẩn */
+  .wrapper {
+    padding: 0 30px;
+  }
+  body {
+    font-size: 6px;
+  }
+  .header-information {
+    display: none;
+  }
+  .header-nav-list a:not(a:first-child) {
+    display: none;
+  }
+  .header-nav-list a:first-child {
+    display: block !important;
+    font-size: 12px;
+    float: left;
+  }
+  .toggle-btn {
+    display: block;
+    float: right;
+  }
+
+  .nav-search {
+    display: none;
+  }
+
+  .logo img {
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+  }
+  .header-nav {
+    height: 50px !important;
+  }
+  /* end header */
+  .banner {
+    margin-top: 50px;
+  }
+  /* product card */
+  .product-item {
+    max-width: 100%;
+    height: auto;
+
+    padding: 8px;
+  }
+
+  .product-information {
+    padding: 8px;
+  }
+
+  .product-name {
+    margin: 0;
+  }
+  .product-list {
+    grid-template-columns: 1fr 1fr !important;
+    justify-content: center; /* Căn ngang giữa */
+    align-items: center;
+  }
+  /* middle */
+  /* left-tag */
+  .title-border {
+    font-size: 10px;
+  }
+  .search-form {
+    padding: 4px;
+  }
+  .search-form input {
+    height: 15px;
+    font-size: 8px;
+    padding: 0;
+  }
+
+  .search-form button {
+    height: 15px;
+    width: 15px;
+    padding: 3px;
+  }
+
+  .search-filter {
+    margin-top: 10px;
+  }
+  .filter-brand {
+    font-size: 8px;
+  }
+  /* end left-tag */
+  /* pagination */
+  .pagination {
+    margin-top: 25px !important;
+    gap: 6px;
+  }
+  .pagination button {
+    height: 20px;
+    width: 20px;
+  }
+  /* end middle */
+  /* footer */
+  footer {
+    margin-top: 20px;
+  }
+  .information {
+    padding: 15px 0 0 0;
+  }
+
+  .bot-footer {
+    margin-bottom: 5px;
+  }
+
+  .information img {
+    width: 30px;
+    height: 30px;
+  }
+  .information p {
+    margin: 6px;
+  }
+
+  .footer-social img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .logo-bottom img {
+    width: 45px;
+  }
+  /* end footer */
+}
+
+/* dropdown menu */
+/* Style cho button trong dropdown */
+.dropbtn {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style cho container của dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style cho nội dung của dropdown */
+.dropdown-content {
+  top: 60px;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Style cho các mục trong dropdown */
+.dropdown-content a {
+  background-color: white;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Hover effect cho các mục trong dropdown */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Hiển thị nội dung của dropdown khi hover vào button */
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+  display: block;
+}

@@ -1,0 +1,31 @@
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* product */
+  .product-top {
+    margin: 40px 0 20px 0 !important;
+    font-size: 12px;
+  }
+  .left-tag {
+    width: 25% !important;
+  }
+
+  .product-list {
+    width: 75% !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 4px !important;
+    grid-auto-flow: column;
+  }
+  /* chung */
+}
+
+/* @media (max-width: 768px) {
+  .left-tag {
+    width: 33% !important;
+  }
+
+  .product-list {
+    width: 67% !important;
+    grid-template-columns: repeat(, 1fr) !important;
+    gap: 4px !important;
+    grid-auto-flow: column;
+  }
+} */

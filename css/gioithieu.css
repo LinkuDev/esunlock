@@ -6,9 +6,11 @@
 
 .esunlock-gioithieu {
   width: 100%;
-  max-width: 1440px;
   height: auto;
-  margin-top: 40px;
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .gioithieu-brand-logo {

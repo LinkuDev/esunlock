@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/tintuc2.css" />
+    <link rel="stylesheet" href="css/responsive/tintuc2Res.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -33,36 +34,55 @@
           </ul>
         </div>
       </div>
-      <div class="wrapper">
+      <div class="">
         <div class="header-nav">
-          <ul class="header-nav-list">
-            <li class="header-nav-item">
-              <img src="./img/logo/logoEnsunlock.png" alt="ensunLock" />
-            </li>
-            <li class="header-nav-item">
-              <a href="#">TRANG CHỦ</a>
-            </li>
-            <li class="header-nav-item">
-              <a href="#">GIỚI THIỆU</a>
-            </li>
-            <li class="header-nav-item">
-              <a href="#">SẢN PHẨM</a>
-            </li>
-            <li class="header-nav-item">
-              <a href="#">TIN TỨC</a>
-            </li>
-            <li class="header-nav-item">
-              <a href="#">LIÊN HỆ</a>
-            </li>
-          </ul>
+          <div class="logo">
+            <img src="./img/logo/logoEnsunlock.png" alt="ensunLock" />
+          </div>
+          <div class="header-nav-list" id="myTopnav">
+            <a href="#">KHÓA CỬA VÂN TAY ESUNLOCK</a>
+
+            <a href="index.html">TRANG CHỦ</a>
+
+            <a href="gioithieu.html">GIỚI THIỆU</a>
+            <div class="dropdown">
+              <button class="dropbtn">
+                SẢN PHẨM <img src="img/icon/arrow-down.svg" alt="" />
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Khóa cửa Philips</a>
+                <a href="#">Khóa cửa Philips</a>
+                <a href="#">Khóa cửa Philips</a>
+                <a href="#">Khóa cửa Philips</a>
+                <a href="#">Khóa cửa Philips</a>
+                <a href="#">Khóa cửa Philips</a>
+              </div>
+            </div>
+
+            <a href="tintuc.html">TIN TỨC</a>
+
+            <a href="lienhe.html">LIÊN HỆ</a>
+          </div>
+
           <div class="nav-search">
             <input type="text" placeholder="Tìm kiếm" />
             <button type="submit">
               <img src="./img/icon/search.svg" alt="" />
             </button>
           </div>
+          <div class="toggle-btn">
+            <img id="toggleButton" src="img/icon/navbar.svg" alt="" />
+          </div>
         </div>
-        
+      </div>
+      <div id="hiddenDiv" class="drop-menu">
+        <a href="index.html"><li>TRANG CHỦ</li></a>
+        <a href="gioithieu.html"><li>GIỚI THIỆU</li></a>
+        <a href="sanpham.html"><li>SẢN PHẨM</li></a>
+        <a href="dichvu.html"><li>DỊCH VỤ</li></a>
+        <a href="duan.html"><li>DỰ ÁN</li></a>
+        <a href="tintuc.html"><li>TIN TỨC</li></a>
+        <a href="linehe.html"><li>LIÊN HỆ</li></a>
       </div>
     </header>
 
@@ -277,59 +297,80 @@
           </div>
         </div>
       </div>
-    <footer>
-      <div class="vector-layer">
-        <img src="./img/images/vector-footer.png" alt="" />
-      </div>
-      <div class="container wrapper">
-        <div class="information">
-          <div>
-            <img src="img/logo/esunlock-logo-white.png" />
-            <p>
-              <span>KHOÁ CỬA VÂN TAY ESUN LOCK</span> <br />
-              <span>Địa chỉ:</span> 124 Diên Hồng, Hoà Xuân, Cẩm Lệ, Đà Nẵng<br />
-              <span>Hotline:</span> 0829 426 426<br />
-              <span>Email: </span>info@esunlock.vn
-            </p>
-            <div class="footer-social" style="display: flex; gap: 10px">
-              <img src="img/icon/footer-fb.svg" />
-              <img src="img/icon/ins.svg" />
-              <img src="img/icon/youtobe.svg" />
+      <footer>
+        <div class="vector-layer">
+          <img src="./img/images/vector-footer.png" alt="" />
+        </div>
+        <div class="container wrapper">
+          <div class="information">
+            <div>
+              <img src="img/logo/esunlock-logo-white.png" />
+              <p>
+                <span>KHOÁ CỬA VÂN TAY ESUN LOCK</span> <br />
+                <span>Địa chỉ:</span> 124 Diên Hồng, Hoà Xuân, Cẩm Lệ, Đà Nẵng<br />
+                <span>Hotline:</span> 0829 426 426<br />
+                <span>Email: </span>info@esunlock.vn
+              </p>
+              <div class="footer-social" style="display: flex; gap: 10px">
+                <img src="img/icon/footer-fb.svg" />
+                <img src="img/icon/ins.svg" />
+                <img src="img/icon/youtobe.svg" />
+              </div>
+            </div>
+            <div id="desk-el">
+              <span>VỀ CHÚNG TÔI</span>
+              <p>Giới thiệu</p>
+              <p>Tuyển dụng</p>
+              <p>Liên hệ</p>
+            </div>
+            <div id="desk-el">
+              <span>SẢN PHẨM</span>
+              <p>Khóa cửa vân tay Philips</p>
+              <p>Khóa cửa vân tay Bosch</p>
+              <p>Khóa cửa vân tay Xiaomi</p>
+              <p>Khóa cửa vân tay Samsung</p>
+              <p>Khóa cửa vân tay Panasonic</p>
+            </div>
+            <div id="desk-el">
+              <span>CHÍNH SÁCH VÀ QUI ĐỊNH</span>
+              <p>Chính sách đổi trả hàng</p>
+              <p>Chính sách bảo hành</p>
+              <p>Chính sách và quy định chung</p>
             </div>
           </div>
-          <div id="desk-el">
-            <span>VỀ CHÚNG TÔI</span>
-            <p>Giới thiệu</p>
-            <p>Tuyển dụng</p>
-            <p>Liên hệ</p>
-          </div>
-          <div id="desk-el">
-            <span>SẢN PHẨM</span>
-            <p>Khóa cửa vân tay Philips</p>
-            <p>Khóa cửa vân tay Bosch</p>
-            <p>Khóa cửa vân tay Xiaomi</p>
-            <p>Khóa cửa vân tay Samsung</p>
-            <p>Khóa cửa vân tay Panasonic</p>
-          </div>
-          <div id="desk-el">
-            <span>CHÍNH SÁCH VÀ QUI ĐỊNH</span>
-            <p>Chính sách đổi trả hàng</p>
-            <p>Chính sách bảo hành</p>
-            <p>Chính sách và quy định chung</p>
+        </div>
+        <div class="bot-footer wrapper">
+          <div class="container" style="align-items: center">
+            <div>
+              Copyright © 2023 <span>Esun lock</span>. All Rights Reserved
+            </div>
+            <div
+              class="logo-bottom"
+              style="display: flex; gap: 8px; align-items: center"
+            >
+              Designed and Maintained by
+              <img src="img/images/danaweb-footer.png" />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="bot-footer wrapper">
-        <div class="container">
-          <div>
-            Copyright © 2023 <span>Esun Lock</span>. All Rights Reserved
-          </div>
-          <div style="display: flex; gap: 8px">
-            Designed and Maintained by
-            <img src="img/images/danaweb-footer.png" />
-          </div>
-        </div>
-      </div>
-    </footer>
+      </footer>
   </body>
 </html>
+<script>
+  const toggleButton = document.getElementById("toggleButton");
+  const hiddenDiv = document.getElementById("hiddenDiv");
+
+  toggleButton.addEventListener("click", () => {
+    if (hiddenDiv.style.display === "none") {
+      hiddenDiv.style.display = "flex";
+      setTimeout(() => {
+        hiddenDiv.style.opacity = "1";
+      }, 10);
+    } else {
+      hiddenDiv.style.opacity = "0";
+      setTimeout(() => {
+        hiddenDiv.style.display = "none";
+      }, 500);
+    }
+  });
+</script>

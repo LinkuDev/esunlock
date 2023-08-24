@@ -81,7 +81,7 @@
 }
 
 .title-border {
-  width: fit-content !important;
+  width: fit-content;
   padding: 8px 16px;
 }
 .hdsd {

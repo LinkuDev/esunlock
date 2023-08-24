@@ -1,30 +1,8 @@
 @media (min-width: 768px) and (max-width: 1024px) {
-  .wrapper {
-    padding: 0 50px;
-  }
-  body {
-    font-size: 8px;
-  }
-  .header-information-item {
-    font-size: 8px;
-  }
-
-  .header-nav {
-    height: 60px;
-  }
-  .title-category {
-    font-size: 12px;
-    margin-top: 20px;
-    margin-bottom: 5px;
-  }
-
-  .nav-search input {
-    padding: 4px 8px;
-  }
-
   .product-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: column;
     gap: 8px;
   }
 
@@ -48,7 +26,201 @@
     font-size: 12px;
   }
 
+  .detail-list {
+    gap: 0;
+  }
+
+  .esun-text {
+    gap: 0;
+  }
   .btn-white button {
     padding: 8px 16px;
+  }
+
+  .btn-detail {
+    padding: 6px 12px;
+  }
+
+  .font-20 {
+    font-size: 12px;
+  }
+
+  .news-item-title {
+    font-size: 10px;
+  }
+
+  .news-item img {
+    height: 80px;
+    width: auto;
+  }
+
+  .news-info img {
+    height: 1em;
+  }
+
+  .news-info {
+    margin-top: 4px;
+  }
+
+  .news-title {
+    margin-top: 0px;
+  }
+  .news-text {
+    margin-top: 0px;
+  }
+
+  /* liên hệ */
+  .contact {
+    margin-top: 20px;
+  }
+
+  .info-form {
+    gap: 4px;
+  }
+
+  .info-form input {
+    height: 24px;
+    font-size: 10px;
+  }
+
+  .btn-form {
+    height: 24px;
+    font-size: 10px;
+    width: 70px;
+    padding: 0;
+  }
+
+  .gg-map img {
+    width: 300px;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .title-category {
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+
+  .brand-logo-item button {
+    padding: 12px 4px;
+    width: 60px;
+    height: 20px;
+  }
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: column;
+  }
+  .product-under {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .esunlock {
+    margin-top: 30px;
+  }
+
+  .esun-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img-layer img {
+    max-width: 360px;
+    max-height: 260px;
+  }
+  .esun-detail {
+    padding: 20px 0;
+    gap: 15px;
+  }
+  .detail-title {
+    font-size: 14px;
+  }
+
+  .detail-text {
+    font-size: 10px;
+  }
+
+  .detail-list {
+    gap: 0;
+  }
+
+  .esun-text {
+    gap: 0;
+    padding-left: 5vw;
+  }
+  .btn-white button {
+    padding: 5px 12px;
+  }
+
+  .btn-detail {
+    padding: 5px 10px;
+  }
+
+  .font-20 {
+    font-size: 10px;
+  }
+
+  .news-item-title {
+    font-size: 6px;
+  }
+  .news-item-text {
+    font-size: 5px;
+  }
+  .news-item-right {
+    margin-left: 5px;
+  }
+  .news-item img {
+    height: 45px;
+    width: auto;
+  }
+
+  .news-info img {
+    height: 1em;
+  }
+
+  .news-info {
+    margin-top: 2px;
+  }
+  .content-right {
+    gap: 5px;
+  }
+
+  .news-title {
+    margin-top: 0px;
+  }
+  .news-text {
+    margin-top: 0px;
+  }
+
+  /* liên hệ */
+  .contact {
+    margin-top: 15px;
+  }
+
+  .info-form {
+    gap: 3px;
+  }
+  .info-title {
+    margin-bottom: 5px;
+  }
+  .info-form input {
+    height: 20px;
+    font-size: 8px;
+  }
+
+  .btn-form {
+    height: 20px;
+    font-size: 8px;
+    width: 60px;
+    padding: 0;
+  }
+
+  .gg-map img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }

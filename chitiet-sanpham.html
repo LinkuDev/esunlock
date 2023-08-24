@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/chitiet-sanpham.css" />
+    <link rel="stylesheet" href="css/responsive/chitiet-sanphamRes.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -35,34 +36,42 @@
       </div>
       <div class="wrapper">
         <div class="header-nav">
-          <ul class="header-nav-list">
-            <li class="header-nav-item">
-              <img src="./img/logo/logoEnsunlock.png" alt="ensunLock" />
-            </li>
-            <li class="header-nav-item">
-              <a href="#">TRANG CHỦ</a>
-            </li>
-            <li class="header-nav-item">
-              <a href="#">GIỚI THIỆU</a>
-            </li>
-            <li class="header-nav-item">
-              <a href="#">SẢN PHẨM</a>
-            </li>
-            <li class="header-nav-item">
-              <a href="#">TIN TỨC</a>
-            </li>
-            <li class="header-nav-item">
-              <a href="#">LIÊN HỆ</a>
-            </li>
-          </ul>
+          <div class="logo">
+            <img src="./img/logo/logoEnsunlock.png" alt="ensunLock" />
+          </div>
+          <div class="header-nav-list" id="myTopnav">
+            <a href="#">KHÓA CỬA VÂN TAY ESUNLOCK</a>
+
+            <a href="#">TRANG CHỦ</a>
+
+            <a href="#">GIỚI THIỆU</a>
+
+            <a href="#">SẢN PHẨM</a>
+
+            <a href="#">TIN TỨC</a>
+
+            <a href="#">LIÊN HỆ</a>
+          </div>
+
           <div class="nav-search">
             <input type="text" placeholder="Tìm kiếm" />
             <button type="submit">
               <img src="./img/icon/search.svg" alt="" />
             </button>
           </div>
+          <div class="toggle-btn">
+            <img id="toggleButton" src="img/icon/navbar.svg" alt="" />
+          </div>
         </div>
-        
+      </div>
+      <div id="hiddenDiv" class="drop-menu">
+        <a href="index.html"><li>TRANG CHỦ</li></a>
+        <a href="gioithieu.html"><li>GIỚI THIỆU</li></a>
+        <a href="sanpham.html"><li>SẢN PHẨM</li></a>
+        <a href="dichvu.html"><li>DỊCH VỤ</li></a>
+        <a href="duan.html"><li>DỰ ÁN</li></a>
+        <a href="tintuc.html"><li>TIN TỨC</li></a>
+        <a href="linehe.html"><li>LIÊN HỆ</li></a>
       </div>
     </header>
     <div class="container wrapper">
@@ -124,28 +133,51 @@
 
       <div class="desc">
         <div class="desc-section">
-          <div class="desc-title"> 
+          <div class="desc-title">
             <div class="title-border">THÔNG TIN SẢN PHẨM</div>
             <div class="title-border hdsd">HƯỚNG DẪN SỬ DỤNG</div>
           </div>
           <div class="desc-detail">
-            <p>Khóa cửa vân tay Philips DDL603E-5HWS có thiết kế tay cầm truyền thống cùng với vị trí nhận diện vân tay trên tay cầm giúp bạn dễ dàng mở khóa. Bên cạnh đó, mã khóa còn thu hút người dùng bởi các tính năng ưu việt cùng 4 phương thức mở khóa quen thuộc là vân tay, mật mã, thẻ từ, chìa cơ và đặc biệt có thêm phương thức mở khóa từ xa thông qua APP( nếu cần)</p>
-            <img src="img/images/desc-img.png" alt="">
-            
-            <div style="line-height: 180%;">
-              <span style="font-weight: 600">Thông số kỹ thuật của Khóa cửa vân tay Philips DDL603E-5HWF</span> <br>
-              - Mở khóa bằng: vân tay, thẻ từ, mã số, chìa cơ. Quản lý khóa từ xa bằng app trên mobile. <br>
-              - Có thể đóng, mở bằng điều khiển từ xa (remote) nếu cần. Đăng kí được: 100 vân tay, 100 mã số, 100 thẻ từ<br>
-              - Kích thước thân khóa ngoài: 77.4 x 344.4mm, thân khóa trong: 77.4 x 344.4mm <br>
-              - Màu sắc: 2 loại là Đen và Bạc <br>
-              - Nguồn điện: 8 pin AA alkaline (pin kiềm khô); Nguồn điện khẩn cấp: dùng pin sạc cho điện thoại qua cổng micro USB (đấu bên ngoài trong trường hợp hết pin) <br>
-              - Khoảng cách từ mép cửa đến tâm lỗ khóa (backset): 60/70mm <br>
-              - Khóa cửa vân tay Philips DDL603E-5HWS phù hợp cho cửa dày: 38- 120mm, đố cửa rộng từ 100mm.<br></div>
+            <p>
+              Khóa cửa vân tay Philips DDL603E-5HWS có thiết kế tay cầm truyền
+              thống cùng với vị trí nhận diện vân tay trên tay cầm giúp bạn dễ
+              dàng mở khóa. Bên cạnh đó, mã khóa còn thu hút người dùng bởi các
+              tính năng ưu việt cùng 4 phương thức mở khóa quen thuộc là vân
+              tay, mật mã, thẻ từ, chìa cơ và đặc biệt có thêm phương thức mở
+              khóa từ xa thông qua APP( nếu cần)
+            </p>
+            <img src="img/images/desc-img.png" alt="" />
+
+            <div style="line-height: 180%">
+              <span style="font-weight: 600"
+                >Thông số kỹ thuật của Khóa cửa vân tay Philips
+                DDL603E-5HWF</span
+              >
+              <br />
+              - Mở khóa bằng: vân tay, thẻ từ, mã số, chìa cơ. Quản lý khóa từ
+              xa bằng app trên mobile. <br />
+              - Có thể đóng, mở bằng điều khiển từ xa (remote) nếu cần. Đăng kí
+              được: 100 vân tay, 100 mã số, 100 thẻ từ<br />
+              - Kích thước thân khóa ngoài: 77.4 x 344.4mm, thân khóa trong:
+              77.4 x 344.4mm <br />
+              - Màu sắc: 2 loại là Đen và Bạc <br />
+              - Nguồn điện: 8 pin AA alkaline (pin kiềm khô); Nguồn điện khẩn
+              cấp: dùng pin sạc cho điện thoại qua cổng micro USB (đấu bên ngoài
+              trong trường hợp hết pin) <br />
+              - Khoảng cách từ mép cửa đến tâm lỗ khóa (backset): 60/70mm <br />
+              - Khóa cửa vân tay Philips DDL603E-5HWS phù hợp cho cửa dày: 38-
+              120mm, đố cửa rộng từ 100mm.<br />
+            </div>
           </div>
-          <div style="display: flex; justify-content: center;"><div class="btn-more" style="margin-top: 36px;"><button>Xem thêm <img src="img/images/arrow-up.svg" alt=""></button></div>
+          <div style="display: flex; justify-content: center">
+            <div class="btn-more" style="margin-top: 36px">
+              <button>
+                Xem thêm <img src="img/images/arrow-up.svg" alt="" />
+              </button>
+            </div>
+          </div>
         </div>
-          </div>
-          
+
         <div class="tag-right">
           <div class="search">
             <div class="search-form">
@@ -155,26 +187,21 @@
               </button>
             </div>
             <div class="search-filter">
-              <div class="title-border">TÊN THƯƠNG HIỆU</div>
+              <div class="title-border full-content">TÊN THƯƠNG HIỆU</div>
               <ul class="filter-brand">
                 <li class="brand-item">
-                  
                   <label> Philips</label>
                 </li>
                 <li class="brand-item">
-                 
                   <label> Bosch</label>
                 </li>
                 <li class="brand-item">
-                 
                   <label>Samsung</label>
                 </li>
                 <li class="brand-item">
-                 
                   <label>Xiaomi</label>
                 </li>
                 <li class="brand-item">
-                 
                   <label>Panasonic</label>
                 </li>
               </ul>
@@ -186,7 +213,7 @@
       <div class="another-product">
         <div class="title-border">CÁC SẢN PHẨM KHÁC</div>
         <div class="product">
-           <div class="product-item">
+          <div class="product-item">
             <div class="product-tag">
               <img src="./img/images/tag-new.svg" alt="" />
             </div>
@@ -260,7 +287,8 @@
           </div>
         </div>
       </div>
-    <footer>
+    </div>
+    <footer class="wrapper">
       <div class="vector-layer">
         <img src="./img/images/vector-footer.png" alt="" />
       </div>
@@ -303,11 +331,14 @@
         </div>
       </div>
       <div class="bot-footer wrapper">
-        <div class="container">
+        <div class="container" style="align-items: center">
           <div>
-            Copyright © 2023 <span>Esun Lock</span>. All Rights Reserved
+            Copyright © 2023 <span>Esun lock</span>. All Rights Reserved
           </div>
-          <div style="display: flex; gap: 8px">
+          <div
+            class="logo-bottom"
+            style="display: flex; gap: 8px; align-items: center"
+          >
             Designed and Maintained by
             <img src="img/images/danaweb-footer.png" />
           </div>
@@ -316,3 +347,21 @@
     </footer>
   </body>
 </html>
+<script>
+  const toggleButton = document.getElementById("toggleButton");
+  const hiddenDiv = document.getElementById("hiddenDiv");
+
+  toggleButton.addEventListener("click", () => {
+    if (hiddenDiv.style.display === "none") {
+      hiddenDiv.style.display = "flex";
+      setTimeout(() => {
+        hiddenDiv.style.opacity = "1";
+      }, 10);
+    } else {
+      hiddenDiv.style.opacity = "0";
+      setTimeout(() => {
+        hiddenDiv.style.display = "none";
+      }, 500);
+    }
+  });
+</script>

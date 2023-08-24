@@ -1,0 +1,27 @@
+@media (min-width: 768px) and (max-width: 1024px) {
+  .banner {
+    margin-bottom: 80px;
+  }
+  .title-border {
+    font-size: 12px;
+  }
+  .post-item:last-child,
+  .post-item:nth-last-child(2):not(:last-child) {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    margin-bottom: 50px;
+  }
+
+  .tag-section {
+    display: none;
+  }
+
+  .post-section {
+    padding: 0 5vw;
+    width: 100%;
+  }
+}
