@@ -3,7 +3,9 @@
   width: 100%;
   height: 300x;
 }
-
+.gioithieu-banner img {
+  width: 100%;
+}
 .esunlock-gioithieu {
   width: 100%;
   height: auto;

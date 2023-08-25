@@ -18,7 +18,9 @@ body {
   font-size: 20px;
   font-weight: 600;
 }
-
+.banner img {
+  width: 100% !important;
+}
 /*header trên*/
 .header {
   position: sticky;
@@ -609,6 +611,7 @@ footer span {
   .banner {
     margin-top: 50px;
   }
+
   /* product card */
   .product-item {
     max-width: 100%;
