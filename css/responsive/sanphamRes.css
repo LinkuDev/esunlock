@@ -17,15 +17,12 @@
   /* chung */
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .left-tag {
-    width: 33% !important;
+    display: none;
   }
 
   .product-list {
-    width: 67% !important;
-    grid-template-columns: repeat(, 1fr) !important;
-    gap: 4px !important;
-    grid-auto-flow: column;
+    margin: 0 auto;
   }
-} */
+}

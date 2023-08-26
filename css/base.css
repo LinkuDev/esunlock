@@ -12,6 +12,8 @@ body {
 
 .wrapper {
   padding: 0 15vh;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .font-20 {
@@ -146,6 +148,7 @@ body {
   padding: 16px;
 }
 .product-image {
+  overflow: hidden;
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
@@ -198,9 +201,11 @@ body {
   top: 0px;
   left: 0px;
 }
-
+.product-item:hover {
+  border: #037dae 1px solid;
+}
 .product-item:hover .product-image {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 /*end product */
 
@@ -577,7 +582,7 @@ footer span {
     padding: 0 30px;
   }
   body {
-    font-size: 6px;
+    font-size: 8px;
   }
   .header-information {
     display: none;
@@ -616,7 +621,6 @@ footer span {
   .product-item {
     max-width: 100%;
     height: auto;
-
     padding: 8px;
   }
 
@@ -747,4 +751,9 @@ footer span {
 .dropdown:hover .dropdown-content,
 .dropdown-content:hover {
   display: block;
+}
+
+/*  */
+
+.newss {
 }
